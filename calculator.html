@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+	body
+	{
+		background-color: #af3db8;
+		background-image: url('desktop.jpg');
+		background-size:auto;
+	}
+	.container
+	{
+		width:500px;
+		height:500px;
+		background-image:url('mm.jpg');
+		text-align: center;
+		/*background-attachment:fixed;
+		background-size:cover;*/
+		padding:100px auto;
+		/*--background-repeat: no-repeat;*/
+		margin:100px auto;
+	}
+	.solve input
+	{
+		border-radius: 10%;
+		padding:15px;
+		margin:15px;
+
+	}
+	.nav input
+	{
+		padding:17px;
+		width:462px;
+		color: black;
+	}
+	
+	input:hover
+	{
+		background-color:red;
+	}
+
+</style>
+<script>
+function dis(val) 
+         { 
+             document.getElementById("result").value+=val
+         } 
+function clr(val)
+{
+	document.getElementById("result").value=""
+}
+function solve(val)
+{
+	var x=document.getElementById("result").value
+	var y=eval(x)
+	document.getElementById("result").value=y
+}
+function back()
+{
+	document.getElementById("result").value=0
+}
+</script>
+</head>
+<body>
+<div class="container">
+<div class="nav"><input type="text" id="result">
+<div class="solve">
+	<input type="button" value="c" onclick="clr()"style="background-color: green;font-size:30px border-radius:10%; width:80px;"/>
+	<input type="button" value="% " onclick="dis('%')"style="background-color: green; border-radius:10%; width:80px;"/></button>
+	<input type="button" value="&#8592;" onclick="back()"style="background-color: green;border-radius:10%; width:80px;"/></button>
+	<input type="button" value="/"onclick="dis('/')"style="background-color: green;border-radius:10%; width:80px;"/></button></div>
+<div class="solve">
+	<input type="button" value="7"onclick="dis('7')"style="font-size: 15px;border-radius:10%; width:80px;"/></button>
+<input type="button" value="8"onclick="dis('8')"style="font-size: 15px;border-radius:10%; width:80px;"/></button>
+<input type="button" value="9"onclick="dis('9')"style="font-size: 15px;border-radius:10%; width:80px;"/></button>
+<input type="button" value=" *"onclick="dis('*')"style="background-color: green;border-radius:10%;width:80px;"/></button>
+</div>
+<div class="solve">
+	<input type="button" value="4"onclick="dis('4')"style="font-size: 15px;border-radius: 10%;width:80px;"/></button>
+<input type="button" value="5"onclick="dis('5')"style="font-size: 15px;border-radius: 10%;width:80px;"/></button>
+<input type="button" value="6"onclick="dis('6')"style="font-size: 15px;border-radius: 10%; width:80px;"/></button>
+<input type="button" value=" - " onclick="dis('-')"style="background-color: green;font-size: 15px;border-radius: 10%; width:80px;"/></button></div>
+<div class="solve">
+<input type="button" value="1" onclick="dis('1')" style="font-size:15px;border-radius: 10%; width:80px;"/>
+<input type="button" value="2" onclick="dis('2')" style="font-size: 15px;border-radius: 10%; width:80px;"/></button>
+<input type="button" value="3" onclick="dis('3')"style="font-size: 15px;border-radius: 10%; width:80px;"/></button>
+<input type="button" value="+ " onclick="dis('+')"style="background-color: green;border-radius: 10%; width:80px;"/></button></div>
+<div class="solve">
+	<input type="button" value="00" onclick="dis('0')"style="border-radius: 10%; width:80px;"/></button>
+<input type="button" value="0"onclick="dis('0')"style="border-radius: 10%; width:80px;"/></button>
+<input type="button" value=" ."onclick="dis('.')" style="font-size:15px;border-radius: 10%; width:80px;"/></button>
+<input type="button" value="= "onclick="solve('=')"style="background-color:green;border-radius: 10%;width:80px;"/></button></div>
+</div></div>
+
+</body>
+</html>
